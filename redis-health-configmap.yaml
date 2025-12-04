@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: redis-health
+data:
+  healthcheck.sh: |
+    # محتوى ملف healthcheck.sh الحقيقي هنا
