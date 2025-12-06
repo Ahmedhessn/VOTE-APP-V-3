@@ -19,6 +19,12 @@ spec:
             - containerPort: 80
           env:
             - name: OPTION_A
-              value: "Cats"
+              valueFrom:
+                configMapKeyRef:
+                  name: vote-config
+                  key: OPTION_A
             - name: OPTION_B
-              value: "Dogs"
+              valueFrom:
+                configMapKeyRef:
+                  name: vote-config
+                  key: OPTION_B
